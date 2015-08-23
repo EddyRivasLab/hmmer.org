@@ -1,0 +1,79 @@
+HMMER's web server
+
+"make" installs at:      seddy@96.126.110.11
+in directory:            /var/html/hmmer.org/public_html
+
+
+
+################################################################
+# Making and testing a change
+################################################################
+In a git working directory:
+
+
+  git pull origin
+     [make edits]
+  make test
+     [test site is: ---]
+  make
+     [real site is: http://hmmer.org/, which is 96.126.110.11]
+  make clean
+  git commit -a
+  git push origin
+
+
+
+################################################################
+# Commercially hosted at Linode
+################################################################
+
+Linode management dashboard :
+  https://manager.linode.com/linodes/dashboard/linode1257886
+  user = cryptogenomicon
+
+hmmer.org is currently hosted at linode.com, on a single node:
+  linode1257886 running Ubuntu 14.04 LTS
+  96.126.110.11 
+  archangel
+
+The machine has a single user, seddy. 
+The public_html directory is chown seddy.
+
+The installation scripts use rsync and ssh, and assume that seddy has
+passwordless SSH access configured.
+
+
+
+################################################################
+# Under Git revision control
+################################################################
+
+Git repository for Eddy lab web projects, on Odyssey:
+   /n/eddy_lab/gitrepo/web.git
+
+To get a copy remotely:
+   git clone seddy@login.rc.fas.harvard.edu:/n/eddy_lab/gitrepo/web.git
+or:
+   git clone seddy@ody:/n/eddy_lab/gitrepo/web.git
+
+Replace "seddy" with your username. You need appropriate permissions
+in our lab to access the lab gitrepo. Some of us have an "ody"
+nickname set up for our preauthenticated ssh access.
+
+
+
+################################################################
+# The HMMER logo
+################################################################
+
+The HMMER logo was produced by David Deen (www.daviddeen.com).
+
+The logo with "HMMER" text is hmmer_small.ai
+The square logo without text is hmmer_square.ai
+
+My web page titlebar is hmmer_titlebar.ai
+
+
+
+
+

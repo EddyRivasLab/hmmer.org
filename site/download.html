@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HMMER</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/hmmer.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="col-sm-2 logo">
+          <a href="/">
+            <img id="hmmerLogo" src="images/hmmer_title.png" alt="HMMER"/>
+            <h1>HMMER</h1>
+          </a>
+        </div>
+        <div class="col-sm-10 nav">
+          <ul>
+            <li class="active">Download</li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="http://www.ebi.ac.uk/Tools/hmmer/">Search</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="http://cryptogenomicon.org/category/hmmer/">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row current">
+        <div class="col-sm-12">
+          <h3>The <strong>current version</strong> is HMMER <strong>3.1b2</strong> (05 March 2015).</h3>
+          <div class="well">
+            <table>
+              <tr>
+                <td>Source:</td>
+                <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2.tar.gz">[FTP]</a></td>
+                <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2.tar.gz">[HTTP]</a></td>
+                <td>5.8 MB</td>
+                <td>MD5: <code>c8c141018bc0ccd7fc37b33f2b945d5f</code></td>
+              </tr>
+              <tr>
+                <td>with Linux/Intel ia32 binaries:</td>
+                <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-ia32.tar.gz">[FTP]</a></td>
+                <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-ia32.tar.gz">[HTTP]</a></td>
+                <td>18.1 MB</td>
+                <td>MD5: <code>ce11c2762f35fb9be8614dd4848b2ac1</code></td>
+              </tr>
+              <tr>
+                <td>with Linux/Intel x86_64 binaries:</td>
+                <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-x86_64.tar.gz">[FTP]</a></td>
+                <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-x86_64.tar.gz">[HTTP]</a></td>
+                <td>20.2 MB</td>
+                <td>MD5: <code>44ea3dc8b50657101ab9ba1807ccfcd3</code></td>
+              </tr>
+              <tr>
+                <td>with MacOSX/Intel binaries:</td>
+                <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2-macosx-intel.tar.gz">[FTP]</a></td>
+                <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2-macosx-intel.tar.gz">[HTTP]</a></td>
+                <td>13.5 MB</td>
+                <td>MD5: <code>1251d66d29166032524e515efa331836</code></td>
+              </tr>
+            </table>
+          </div>
+          <p>For information on compiling from source please see our <a href="documentation.html">documentation page</a>.</p>
+        </div>
+      </div>
+
+      <div class="row current">
+        <div class="col-sm-12">
+          <p>If you are looking for <strong>older versions</strong> of the software, try the <a href="#archive">archive</a> section below.</p>
+
+          <h3 id="cygwin">Windows/Cygwin binaries</h3>
+          <p>These binaries are compiled to run in Cygwin (a Linux emulator that can be installed in Windows; <a href="http://www.cygwin.com/">http://www.cygwin.com</a>). In our hands, they run cleanly in a default Cygwin install.</p>
+
+          <p>If you are uncomfortable running HMMER3.1 within Cygwin, you may download older <a href="#windows">HMMER3.0 binaries</a> (graciously produced and provided by Sergey Smirnov at the NCBI) that run in Windows without a Cygwin dependency.</p>
+          <div class="well">
+            <table>
+              <tbody>
+                <tr>
+                  <td>hmmer-3.1b2-cygwin32.tar.gz:</td>
+                  <td>32-bit</td>
+                  <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin32.tar.gz">[FTP]</a></td>
+                  <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin32.tar.gz">[HTTP]</a></td>
+                  <td>15MB</td>
+                  <td>MD5: <code>6fe4c2c4eeaebdad9024390195f50059</code></td>
+                </tr>
+                <tr>
+                  <td>hmmer-3.1b2-cygwin64.tar.gz:</td>
+                  <td>64-bit</td>
+                  <td><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin64.tar.gz">[FTP]</a></td>
+                  <td><a href="http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2-cygwin64.tar.gz">[HTTP]</a></td>
+                  <td>16MB</td>
+                  <td>MD5: <code>b5e265550be62a395dc475aee158a3f4</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="archive">
+        <div class="col-sm-12">
+          <h3> Archive of stable representatives of the HMMER1, HMMER2, and HMMER3 lineages </h3>
+
+          <p>The 1992-1998 HMMER1 lineage was closer to the original Krogh/Haussler
+          conception of profile HMMs. It includes a feature that is missing in
+          HMMER2 and HMMER3: the hmmt program for training HMMs from initially
+          unaligned sequences (and hence creating multiple alignments).
+          The final stable release of HMMER1 was 1.8.5 (Feb 2006).
+          The 1998-2003 HMMER2 lineage introduced the "Plan 7" profile HMM
+          architecture (which HMMER3 still largely shares), and was the long-time
+          foundation for Pfam and other protein domain databases. It still
+          included glocal and global alignment modes that HMMER3 lacks, because
+          HMMER3 currently implements only fully local/local alignment; HMMER2
+          lacks DNA-DNA comparison that was present in HMMER1, and has returned in
+          HMMER3.1. The final stable release of HMMER2 was 2.3.2 (Oct 2003).</p>
+
+          <div class="well">
+            <table>
+              <tbody>
+                <tr>
+                  <td> 3.0</td>
+                  <td> March 2010</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0/hmmer-3.0.tar.gz">[FTP]</a>
+                  </td>
+                  <td>
+                     <a href="http://selab.janelia.org/software/hmmer3/3.0/hmmer-3.0.tar.gz">[HTTP]</a>
+                  </td>
+                  <td> MD5: <code> 4cf685f3bc524ba5b5cdaaa070a83588</code></td>
+                </tr>
+                <tr>
+                  <td> 2.3.2</td>
+                  <td> Oct 2003</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3.2/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.3.2/hmmer-2.3.2.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3.2/hmmer-2.3.2.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 5f073340c0cf761288f961a73821228a</code></td>
+                </tr>
+                <tr>
+                  <td> 1.8.5</td>
+                  <td> Feb 2006</td>
+                  <td>
+                  </td><td> <a href="ftp://selab.janelia.org/pub/software/hmmer/1.8.5/hmmer-1.8.5.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td> <a href="http://selab.janelia.org/software/hmmer/1.8.5/hmmer-1.8.5.tar.gz"> [HTTP] </a></td>
+                  <td> MD5: <code> b864c2f08a3cc03b7999036457cbe0ba</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="windows">Windows binaries</h3>
+          <p>These binaries have been graciously produced and provided by Sergey Smirnov at the NCBI. Please see the readme.txt included within the zip file for installation hints and contact details.</p>
+          <div class="well">
+            <table>
+              <tr>
+                <td>hmmer3_windows.zip (v3.0):</td>
+                <td></td>
+                <td><a href="/binaries/hmmer3.0_windows.zip">[HTTP]</a></td>
+                <td>3.2MB</td>
+                <td>MD5: <code>184584197a8930bf9b36602909e30a45</code></td>
+              </tr>
+            </table>
+          </div>
+
+          <h3> HMMER3 test releases </h3>
+
+          <p>These links are to archived versions of the 2009-2010 alpha, beta, and release candidate test releases.</p>
+
+          <div class="well">
+
+            <table>
+              <tbody>
+                <tr>
+                  <td> 3.1b1</td>
+                  <td> 22 Apr 2013</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.1b1/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b1/hmmer-3.1b1.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.1b1/hmmer-3.1b1.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code>e81b689fe1dd7625cff84c08cbead1fc</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 3.0rc2</td>
+                  <td> 8 Mar 2010</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0rc2/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0rc2/hmmer-3.0rc2.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0rc2/hmmer-3.0rc2.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 4a3d8e217556e8ea791d5eaeafb3b072</code></td>
+                </tr>
+                <tr>
+                  <td> 3.0rc1</td>
+                  <td> 10 Feb 2010</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0rc1/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0rc1/hmmer-3.0rc1.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0rc1/hmmer-3.0rc1.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> f2dbd921c97cf53474abff25ef9cef16</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 3.0b3</td>
+                  <td> 13 Nov 2009</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b3/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0b3/hmmer-3.0b3.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b3/hmmer-3.0b3.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 19c1fddda11c38e5fdfff03d098fa040</code></td>
+                </tr>
+                <tr>
+                  <td> 3.0b2</td>
+                  <td> 21 Jun 2009</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b2/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0b2/hmmer-3.0b2.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b2/hmmer-3.0b2.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> b8f5f2baa9e56ed029fea9e6939f8d36</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 3.0b1</td>
+                  <td> 17 Jun 2009</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b1/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0b1/hmmer-3.0b1.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0b1/hmmer-3.0b1.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 67f26fc890e4099b3d695a240990badd</code></td>
+                </tr>
+                <tr>
+                  <td> 3.0a2</td>
+                  <td> 12 Mar 2009</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0a2/RELEASE-NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0a2/hmmer-3.0a2.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0a2/hmmer-3.0a2.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> b829076fc2dc6fe376c1aea2090f16c8</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 3.0a1</td>
+                  <td> 12 Jan 2009</td>
+                  <td></td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.0a1/hmmer-3.0a1.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer3/3.0a1/hmmer-3.0a1.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 73f268e0e8ab8b19a10b3b188f9cb677</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3> Other archived versions of HMMER2 and HMMER1 </h3>
+
+          <p>If, for some reason, you want to obtain a source code copy of a
+          version that you know existed, but which doesn't appear in the links
+          below, contact us. We should be able to dig most things out of
+          revision control, if nothing else. We believe the versions below were
+          the most widely distributed ones.</p>
+
+          <div class="well">
+            <table>
+              <tbody>
+                <tr class="even">
+                  <td> 2.4i</td>
+                  <td> Dec 2006</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.4i/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.4i/hmmer-2.4i.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.4i/hmmer-2.4i.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> dab234c87e026ac1de942450750acd20</code></td>
+                </tr>
+                <tr>
+                  <td> 2.3.1</td>
+                  <td> Jun 2003</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3.1/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.3.1/hmmer-2.3.1.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3.1/hmmer-2.3.1.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> c724413e5761c630892506698a4716e2</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 2.3</td>
+                  <td> Apr 2003</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.3/hmmer-2.3.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.3/hmmer-2.3.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 09de4dcd66832153412108e36989de48</code></td>
+                </tr>
+                <tr>
+                  <td> 2.2g</td>
+                  <td> May 2001</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.2g/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.2g/hmmer-2.2g.tar.gz"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.2g/hmmer-2.2g.tar.gz"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> d7def2007a0aaf2eafb9a96a07986b8c</code></td>
+                </tr>
+                <tr class="even">
+                  <td> 2.1.1</td>
+                  <td> Dec 1998</td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.1.1/NOTES"> [Release Notes] </a>
+                  </td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/2.1.1/hmmer-2.1.1.tar.Z"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/2.1.1/hmmer-2.1.1.tar.Z"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 0f98910a3507b4d52fbe82adc6fa89b5</code></td>
+                </tr>
+                <tr>
+                  <td> 1.8.4</td>
+                  <td> Jul 1997</td>
+                  <td></td>
+                  <td>
+                    <a href="ftp://selab.janelia.org/pub/software/hmmer/1.8.4/hmmer-1.8.4.tar.Z"> [FTP]  </a>
+                  </td>
+                  <td>
+                    <a href="http://selab.janelia.org/software/hmmer/1.8.4/hmmer-1.8.4.tar.Z"> [HTTP] </a>
+                  </td>
+                  <td> MD5: <code> 2c359945f12c69b0c0f0b5a47d370977</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer">
+        <div class="col-sm-12"></div>
+      </div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

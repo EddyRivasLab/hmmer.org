@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HMMER</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/hmmer.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="col-sm-2 logo">
+          <a href="/">
+            <img id="hmmerLogo" src="images/hmmer_title.png" alt="HMMER"/>
+            <h1>HMMER</h1>
+          </a>
+        </div>
+        <div class="col-sm-10 nav">
+          <ul>
+            <li><a href="download.html">Download</a></li>
+            <li class="active">Documentation</li>
+            <li><a href="http://www.ebi.ac.uk/Tools/hmmer/">Search</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="http://cryptogenomicon.org/category/hmmer/">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h3> Current user guide & release notes</h3>
+          <ul>
+            <li><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/Userguide.pdf">User's Guide: [PDF, 119 pages]</a></li>
+            <li><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/RELEASE-NOTES">Release notes</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Briefly, to compile from source:</h3>
+          <pre>
+  % tar zxf hmmer-3.1b2.tar.gz
+  % cd hmmer-3.1b2
+  % ./configure
+  % make
+  % make check</pre>
+
+          <p>The 'make check' is optional; it runs a test suite that checks for errors in the software.</p>
+
+          <p>All the binary tarballs include source code, plus a <code> binaries/</code>
+          directory containing precompiled binaries. Installing HMMER takes nothing other
+          than moving these binaries wherever you want them.</p>
+
+          <p>We believe HMMER compiles and runs on <em>any</em> POSIX-compliant system
+          with an ANSI C99 compiler, including Mac OS/X, Linux, and any UNIX operating systems.
+          For more installation and configuration options, see the <strong>Installation</strong>
+          chapter of the User Guide (included in the package, and also linked
+          in the documentation section on this site).</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Subversion Access</h3>
+
+          <p>Our current development trunk is available via Subversion. To get an anonymous, read-only checkout:</p>
+          <pre class="bold">svn checkout https://svn.janelia.org/eddylab/eddys/src/hmmer/trunk hmmer</pre>
+
+          <p>We welcome code contributions. It's best to give us patches against the development trunk, rather than against the release code (but we'll look at whatever you give us). For developers who've been donating good patches to us for a while, we'll grant write access to the repository.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Further Reading</h3>
+
+          <div class="well">
+            <h5>Blog</h5>
+            <p>See the blog <a href="http://cryptogenomicon.org/">Cryptogenomicon</a> for more information and discussion about HMMER3.</p>
+
+            <h5>Papers</h5>
+            <ul>
+            <li>Eddy SR. Accelerated Profile HMM Searches. PLoS Comput Biol. 2011
+          Oct;7(10):e1002195</li>
+            <li>Eddy SR. A Probabilistic Model of Local Sequence Alignment that Simplifies Statistical Significance Estimation. PLoS Comput. Biol. 2008 May 30;4(5):e1000069 </li>
+            <li>Eddy SR. A new generation of homology search tools based on probabilistic
+          inference. Genome Inform. 2009 Oct;23(1):205-11.</li>
+            <li><a href="/publications.html">Other publications</a> about HMMER</li>
+            </ul>
+
+            <h5>Book</h5>
+            <p>
+            The theory behind profile HMMs:
+                R. Durbin, S. Eddy, A. Krogh, and G. Mitchison,
+                <a href="http://selab.janelia.org/cupbook.html">
+                <i>Biological sequence analysis: probabilistic models of proteins
+                and nucleic acids</i></a>,
+                Cambridge University Press, 1998.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <li>
+          <a href="http://www.ploscompbiol.org/doi/pcbi.1000069" id="Eddy08">A Probabilistic Model of Local Sequence Alignment that Simplifies Statistical Significance Estimation</a>.   S. R. Eddy.
+          <em>PLoS Comput. Biol.</em>,
+          4:e1000069,
+          2008.
+          <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&cmd=Retrieve&list_uids=18516236&dopt=Abstract"><span class="glyphicon glyphicon-globe"></span> abstract</a>
+          <div></div></li>
+
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Support</h3>
+          <p>
+          HMMER is not intended to be commercial software. In particular, it
+          comes with no promise of support whatsoever. We are generally not able
+          to respond individually to requests for help with the package, beyond
+          the help already provided in HMMER's documentation. We do respond
+          gratefully to useful suggestions for improved documentation, and to
+          bug reports.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Reporting bugs</h3>
+          <p><a href="http://selab.janelia.org/people/eddys/contact.html">Email me</a>
+ and please provide as much information as possible so that I can recreate the problem, but equally do not write
+ pages and pages. Useful things to include are: </p>
+          <ul>
+            <li>Input data (or examples, but just sufficient to recreate the problem).</li>
+            <li>Information about the operating system you are using (e.g. % cat /proc/cpuinfo, or % uname -a)</li>
+          </ul>
+          <p>Without these pieces of information I have to guess or send mails back and forth to determine the cause
+          of the issue. Many questions are also covered in the <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/Userguide.pdf">HMMER documentation</a>,
+          so it may be worth browsing there first before sending an e-mail.</p>
+        </div>
+      </div>
+
+
+      <div class="row footer">
+        <div class="col-sm-12"></div>
+      </div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+

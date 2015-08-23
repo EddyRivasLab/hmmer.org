@@ -1,0 +1,169 @@
+[%- BLOCK title -%]
+[%- title_link = entry.title_link -%]
+[%- IF title_link %]
+  <a href="[% title_link %]" id="[% entry.key %]">
+[%- END -%]
+[% entry.cleaned('title') %]
+[%- IF title_link %]</a>.[%- END -%]
+[%- END -%]
+[%- BLOCK notes -%]
+<div>
+[%- FOREACH key IN entry.links.keys.sort -%]
+  [%- IF entry.links.$key.0.label -%]
+  [% entry.links.$key.0.label %] :
+  [%- END -%]
+  [%- FOREACH link IN entry.links.$key -%]
+    [%- IF link.type == "CORRECTION" -%]
+    There is a <a href="[% link.url %]">[[% link.text %]]</a> for this publication.
+    [%- ELSE -%]
+    <a href="[% link.url %]">[[% link.text %]]</a>
+    [%- END -%]
+  [%- END -%]
+  <br/>
+[%- END -%]
+</div>
+[%- END -%]
+
+[%- year = 0000 -%]
+
+[%- FOREACH entry IN entries -%]
+[%- IF ! nodiv -%]
+[%- IF entry.year != year -%]
+  [%- year = entry.year -%]
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>[% year%]</h2>
+    </div>
+  </div>
+[%- END -%]
+[%- END -%]
+
+[%- IF entry.type == 'ARTICLE' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+[%- PROCESS title -%]
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+<em>[% entry.cleaned_field('journal') %]</em>,
+[% IF entry.volume && entry.pages %][% entry.volume %]:[% entry.pages %],[% END %]
+[% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.pubmedlink %]
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'PHDTHESIS' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+<em>[%- PROCESS title -%]</em>
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+PhD Thesis:[% entry.field('school') %], [% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'BOOK' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+<em>[%- PROCESS title -%]</em>
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+[% entry.publisher %], [% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'INCOLLECTION' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+[%- PROCESS title -%]
+In: <em>[% entry.cleaned('booktitle') %]</em>[%- IF entry.pages -%], [% entry.pages %][%- END -%].
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+[% entry.publisher %], [% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'INPROCEEDINGS' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+[%- PROCESS title -%]
+In: <em>[% entry.cleaned('booktitle') %]</em>,
+[% entry.pages %].
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%],
+[% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'MASTERSTHESIS' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+<em>[%- PROCESS title -%]</em>
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+Masters Thesis: [%entry.school %], [% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'TECHREPORT' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+[%- PROCESS title -%]
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+[% entry.year %]
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- ELSIF entry.type == 'UNPUBLISHED' -%]
+<div class="row">
+  <div class="col-md-9 col-sm-8">
+[%- PROCESS title -%]
+[%- FOREACH author IN entry.cleaned_author -%]
+  [% author.first %] [% author.last %][% IF ! loop.last %],[% END %]
+[%- END -%].
+[% entry.note %], [% entry.year %].
+[%- PROCESS notes -%]
+  </div>
+  <div class="col-md-3 col-sm-4">
+[% entry.reprint_link -%]
+  </div>
+</div>
+
+[%- END -%]
+[%- END -%]
+</ul>
