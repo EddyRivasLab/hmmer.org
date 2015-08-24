@@ -40,8 +40,8 @@
         <div class="col-sm-12">
           <h3> Current user guide & release notes</h3>
           <ul>
-            <li><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/Userguide.pdf">User's Guide: [PDF, 119 pages]</a></li>
-            <li><a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/RELEASE-NOTES">Release notes</a></li>
+            <li><a href="http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf">User's Guide: [PDF, 119 pages]</a></li>
+            <li><a href="http://eddylab.org/software/hmmer3/3.1b2/RELEASE-NOTES">Release notes</a></li>
           </ul>
         </div>
       </div>
@@ -62,21 +62,11 @@
           directory containing precompiled binaries. Installing HMMER takes nothing other
           than moving these binaries wherever you want them.</p>
 
-          <p>We believe HMMER compiles and runs on <em>any</em> POSIX-compliant system
+          <p>We believe HMMER compiles and runs on any POSIX-compliant system
           with an ANSI C99 compiler, including Mac OS/X, Linux, and any UNIX operating systems.
           For more installation and configuration options, see the <strong>Installation</strong>
           chapter of the User Guide (included in the package, and also linked
           in the documentation section on this site).</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <h3>Subversion Access</h3>
-
-          <p>Our current development trunk is available via Subversion. To get an anonymous, read-only checkout:</p>
-          <pre class="bold">svn checkout https://svn.janelia.org/eddylab/eddys/src/hmmer/trunk hmmer</pre>
-
-          <p>We welcome code contributions. It's best to give us patches against the development trunk, rather than against the release code (but we'll look at whatever you give us). For developers who've been donating good patches to us for a while, we'll grant write access to the repository.</p>
         </div>
       </div>
 
@@ -90,11 +80,9 @@
 
             <h5>Papers</h5>
             <ul>
-            <li>Eddy SR. Accelerated Profile HMM Searches. PLoS Comput Biol. 2011
-          Oct;7(10):e1002195</li>
-            <li>Eddy SR. A Probabilistic Model of Local Sequence Alignment that Simplifies Statistical Significance Estimation. PLoS Comput. Biol. 2008 May 30;4(5):e1000069 </li>
-            <li>Eddy SR. A new generation of homology search tools based on probabilistic
-          inference. Genome Inform. 2009 Oct;23(1):205-11.</li>
+            <li>Eddy SR. Accelerated profile HMM searches. PLoS Comput Biol. 7:e1002195 (2011) </li>
+            <li>Eddy SR. A probabilistic model of local sequence alignment that simplifies statistical significance estimation. PLoS Comput. Biol. 4:e1000069 (2008) </li>
+            <li>Eddy SR. A new generation of homology search tools based on probabilistic inference. Genome Inform. 23:205-11 (2009).</li>
             <li><a href="/publications.html">Other publications</a> about HMMER</li>
             </ul>
 
@@ -102,7 +90,7 @@
             <p>
             The theory behind profile HMMs:
                 R. Durbin, S. Eddy, A. Krogh, and G. Mitchison,
-                <a href="http://selab.janelia.org/cupbook.html">
+                <a href="http://eddylab.org/cupbook.html">
                 <i>Biological sequence analysis: probabilistic models of proteins
                 and nucleic acids</i></a>,
                 Cambridge University Press, 1998.
@@ -111,27 +99,15 @@
         </div>
       </div>
 
-
-      <li>
-          <a href="http://www.ploscompbiol.org/doi/pcbi.1000069" id="Eddy08">A Probabilistic Model of Local Sequence Alignment that Simplifies Statistical Significance Estimation</a>.   S. R. Eddy.
-          <em>PLoS Comput. Biol.</em>,
-          4:e1000069,
-          2008.
-          <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&cmd=Retrieve&list_uids=18516236&dopt=Abstract"><span class="glyphicon glyphicon-globe"></span> abstract</a>
-          <div></div></li>
-
-
-
       <div class="row">
         <div class="col-sm-12">
           <h3>Support</h3>
           <p>
-          HMMER is not intended to be commercial software. In particular, it
-          comes with no promise of support whatsoever. We are generally not able
+          Because we're an academic research group, HMMER
+          comes with no promise of support. We are generally not able
           to respond individually to requests for help with the package, beyond
-          the help already provided in HMMER's documentation. We do respond
-          gratefully to useful suggestions for improved documentation, and to
-          bug reports.
+          the help already provided in HMMER's documentation. We do appreciate
+          suggestions for better documentation, improvements, and bug reports.
           </p>
         </div>
       </div>
@@ -139,15 +115,18 @@
       <div class="row">
         <div class="col-sm-12">
           <h3>Reporting bugs</h3>
-          <p><a href="http://selab.janelia.org/people/eddys/contact.html">Email me</a>
- and please provide as much information as possible so that I can recreate the problem, but equally do not write
- pages and pages. Useful things to include are: </p>
+          <p> Email <a href="mailto:&#115;&#101;&#097;&#110;&#064;&#101;&#100;&#100;&#121;&#108;&#097;&#098;&#046;&#111;&#114;&#103;">&#115;&#101;&#097;&#110;&#064;&#101;&#100;&#100;&#121;&#108;&#097;&#098;&#046;&#111;&#114;&#103;</a>
+              and please provide me with enough information that I can recreate the problem.
+              Useful things to include are: </p>
           <ul>
-            <li>Input data (or examples, but just sufficient to recreate the problem).</li>
-            <li>Information about the operating system you are using (e.g. % cat /proc/cpuinfo, or % uname -a)</li>
+            <li>Input data (or examples, a small test case sufficient to recreate the problem).</li>
+            <li>Information about the operating system you are using (e.g. <code> cat /proc/cpuinfo </code> or <code> uname -a </code></li>
+            <li>Which version of HMMER you're using, and whether you compiled from source or used a binary distro.</li>
           </ul>
-          <p>Without these pieces of information I have to guess or send mails back and forth to determine the cause
-          of the issue. Many questions are also covered in the <a href="ftp://selab.janelia.org/pub/software/hmmer3/3.1b2/Userguide.pdf">HMMER documentation</a>,
+          <p>Without these pieces of information I have to make guesses and send mails back and forth with you to determine the cause
+          of the issue, and then I get all frustrated and snippy with you because I'm usually pretty busy, and then you think I'm a jerk, and then I feel guilty and bad and have to go away and go running. Nobody wants all that drama.</p>
+          <p>
+	  Also, many questions are already covered in the <a href="http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf">HMMER documentation</a>,
           so it may be worth browsing there first before sending an e-mail.</p>
         </div>
       </div>

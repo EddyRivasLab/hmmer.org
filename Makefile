@@ -6,11 +6,11 @@ WEBDIR   =  /var/www/hmmer.org/public_html
 LABWEB   =  http://eddylab.org
 
 # Building hmmer.org pages also requires a local git working copy of "labbib", at:
-LABBIB   =  ~/labbib
+LABBIB   =  ${HOME}/labbib
 
 # Building hmmer.org pages is coordinated with the lab web pages, in
 # this same git repo one level up.
-LABDIR   =  ../eddylab.org
+LABDIR   =  ${HOME}/web/eddylab.org
 
 
 # 'make all' updates the live site.
@@ -34,8 +34,8 @@ test:    site/publications-inc.html
 site/publications-inc.html:   ${LABBIB}/lab.bib ${LABBIB}/master.bib
 	rm -f site/publications
 	ln -s ${LABDIR}/site/publications site/publications
-	~/labbib/publications.pl -k 'hmmer' --template=selab.tt --url='${LABWEB}' > site/publications-inc.html
-	~/labbib/publications.pl -k 'hmmer' --template=selab.tt master.bib > site/others-publications-inc.html
+	~/labbib/publications.pl -n -k 'hmmer' --template=selab.tt            > site/publications-inc.html
+	~/labbib/publications.pl    -k 'hmmer' --template=selab.tt master.bib > site/others-publications-inc.html
 	rm -f site/publications
 
 # Clean up this source directory
