@@ -73,7 +73,7 @@
           <pre>
   % wget http://eddylab.org/software/hmmer/hmmer.tar.gz 
   % tar zxf hmmer.tar.gz
-  % cd hmmer-3.3
+  % cd hmmer-3.3.1
   % ./configure --prefix /your/install/path
   % make
   % make check
@@ -92,7 +92,9 @@
 	  (Infernal, for example) and you might have already installed Easel tools.
 
           <p>We believe HMMER compiles and runs on any POSIX-compliant system
-          with an ANSI C99 compiler, including Mac OS/X, Linux, and any UNIX operating systems.
+	  with an ANSI C99 compiler, including Mac OS/X, Linux, and any UNIX operating systems,
+	  provided it supports SSE2 or big-endian Altivec/VMX vector instructions.
+	  This includes essentially all Intel/AMD compatible machines and some PowerPC machines.
           For more installation and configuration options, see the <strong>Installation</strong>
           chapter of the <a href="http://eddylab.org/software/hmmer/Userguide.pdf">User Guide</a> (included in the package).</p>
         </div>
