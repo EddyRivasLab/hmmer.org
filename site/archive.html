@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HMMER</title>
+<link rel="stylesheet" href="css/hmmer.css?v=2">
+</head>
+<body>
+
+<!-- The header is the same on every page. aria-current marks the page you're on. -->
+<header>
+  <a href="/"><img src="images/hmmer_title.png" alt=""> HMMER</a>
+  <nav>
+    <a href="installation.html">Installation</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="archive.html" aria-current="page">Archive</a>
+    <a href="http://www.ebi.ac.uk/Tools/hmmer/">Search</a>
+    <a href="http://cryptogenomicon.org/category/hmmer.html">Blog</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="current">The <strong>current version</strong> is <strong>HMMER 3.4</strong> (15 August 2023).</h2>
+<p>Source: <a href="http://eddylab.org/software/hmmer/hmmer-3.4.tar.gz">hmmer-3.4.tar.gz</a></p>
+
+<h2>Previous HMMER3 releases</h2>
+
+<!-- One row per release: version, date, file. Add new ones at the top. -->
+<table>
+  <tr><td>3.3.2</td>  <td>26 Nov 2020</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.3.2.tar.gz">hmmer-3.3.2.tar.gz</a></td></tr>
+  <tr><td>3.3.1</td>  <td>25 Jul 2020</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.3.1.tar.gz">hmmer-3.3.1.tar.gz</a></td></tr>
+  <tr><td>3.3</td>    <td>18 Nov 2019</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.3.tar.gz">hmmer-3.3.tar.gz</a></td></tr>
+  <tr><td>3.2.1</td>  <td>13 June 2018</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-3.2.1.tar.gz">hmmer-3.2.1.tar.gz</a></td></tr>
+  <tr><td>3.2</td>    <td>7 June 2018</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.2.tar.gz">hmmer-3.2.tar.gz</a></td></tr>
+  <tr><td>3.1b2</td>  <td>5 March 2015</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-3.1b2.tar.gz">hmmer-3.1b2.tar.gz</a></td></tr>
+  <tr><td>3.1b1</td>  <td>22 Apr 2013</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.1b1.tar.gz">hmmer-3.1b1.tar.gz</a></td></tr>
+  <tr><td>3.0</td>    <td>March 2010</td>   <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0.tar.gz">hmmer-3.0.tar.gz</a></td></tr>
+  <tr><td>3.0rc2</td> <td>8 Mar 2010</td>   <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0rc2.tar.gz">hmmer-3.0rc2.tar.gz</a></td></tr>
+  <tr><td>3.0rc1</td> <td>10 Feb 2010</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0rc1.tar.gz">hmmer-3.0rc1.tar.gz</a></td></tr>
+  <tr><td>3.0b3</td>  <td>13 Nov 2009</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0b3.tar.gz">hmmer-3.0b3.tar.gz</a></td></tr>
+  <tr><td>3.0b2</td>  <td>21 Jun 2009</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0b2.tar.gz">hmmer-3.0b2.tar.gz</a></td></tr>
+  <tr><td>3.0b1</td>  <td>17 Jun 2009</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0b1.tar.gz">hmmer-3.0b1.tar.gz</a></td></tr>
+  <tr><td>3.0a2</td>  <td>12 Mar 2009</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0a2.tar.gz">hmmer-3.0a2.tar.gz</a></td></tr>
+  <tr><td>3.0a1</td>  <td>12 Jan 2009</td>  <td><a href="http://eddylab.org/software/hmmer/hmmer-3.0a1.tar.gz">hmmer-3.0a1.tar.gz</a></td></tr>
+</table>
+
+<h2>Archive of stable representatives of the HMMER1 and HMMER2 lineages</h2>
+
+<p>The 1992-1998 HMMER1 lineage was closer to the original Krogh/Haussler
+conception of profile HMMs. It includes a feature that is missing in
+HMMER2 and HMMER3: the hmmt program for training HMMs from initially
+unaligned sequences (and hence creating multiple alignments).
+The final stable release of HMMER1 was 1.8.5 (Feb 2006).
+The 1998-2003 HMMER2 lineage introduced the "Plan 7" profile HMM
+architecture (which HMMER3 still largely shares), and was the long-time
+foundation for Pfam and other protein domain databases. It still
+included glocal and global alignment modes that HMMER3 lacks, because
+HMMER3 implements only fully local/local alignment. HMMER2
+lacked DNA-DNA comparison that was present in HMMER1, and DNA/DNA comparison returned with <code>nhmmer</code> in
+HMMER3.1. The final stable release of HMMER2 was 2.3.2 (Oct 2003).</p>
+
+<table>
+  <tr><td>2.3.2</td> <td>Oct 2003</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.3.2.tar.gz">hmmer-2.3.2.tar.gz</a></td></tr>
+  <tr><td>1.8.5</td> <td>Feb 2006</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-1.8.5.tar.gz">hmmer-1.8.5.tar.gz</a></td></tr>
+</table>
+
+<h2>Other archived versions of HMMER2 and HMMER1</h2>
+
+<p>If, for some reason, you want to obtain a source code copy of a
+version that you know existed, but which doesn't appear in the links
+below, contact me. I should be able to dig most things out of
+revision control, if nothing else. I believe the versions below were
+the most widely distributed ones.</p>
+
+<table>
+  <tr><td>2.4i</td>  <td>Dec 2006</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.4i.tar.gz">hmmer-2.4i.tar.gz</a></td></tr>
+  <tr><td>2.3.1</td> <td>Jun 2003</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.3.1.tar.gz">hmmer-2.3.1.tar.gz</a></td></tr>
+  <tr><td>2.3</td>   <td>Apr 2003</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.3.tar.gz">hmmer-2.3.tar.gz</a></td></tr>
+  <tr><td>2.2g</td>  <td>May 2001</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.2g.tar.gz">hmmer-2.2g.tar.gz</a></td></tr>
+  <tr><td>2.1.1</td> <td>Dec 1998</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-2.1.1.tar.gz">hmmer-2.1.1.tar.Z</a></td></tr>
+  <tr><td>1.8.4</td> <td>Jul 1997</td> <td><a href="http://eddylab.org/software/hmmer/hmmer-1.8.4.tar.gz">hmmer-1.8.4.tar.Z</a></td></tr>
+</table>
+
+</main>
+</body>
+</html>

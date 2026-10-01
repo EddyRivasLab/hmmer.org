@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HMMER</title>
+<link rel="stylesheet" href="css/hmmer.css?v=2">
+</head>
+<body>
+
+<!-- The header is the same on every page. aria-current marks the page you're on. -->
+<header>
+  <a href="/"><img src="images/hmmer_title.png" alt=""> HMMER</a>
+  <nav>
+    <a href="installation.html" aria-current="page">Installation</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="archive.html">Archive</a>
+    <a href="http://www.ebi.ac.uk/Tools/hmmer/">Search</a>
+    <a href="http://cryptogenomicon.org/category/hmmer.html">Blog</a>
+  </nav>
+</header>
+
+<main>
+
+<h2>Easiest way to install HMMER is with your favorite packager for your system:</h2>
+<pre>
+  % brew install hmmer               # OS/X, HomeBrew
+  % port install hmmer               # OS/X, MacPorts
+  % apt install hmmer                # Linux (Ubuntu, Debian...)
+  % dnf install hmmer                # Linux (Fedora)
+  % yum install hmmer                # Linux (older Fedora)
+  % conda install -c biocore hmmer   # Anaconda</pre>
+
+<p>Thanks to all the people who do the packaging!</p>
+
+<h2>Or, brief instructions for obtaining and compiling source code:</h2>
+<pre>
+  % wget http://eddylab.org/software/hmmer/hmmer.tar.gz
+  % tar zxf hmmer.tar.gz
+  % cd hmmer-3.4
+  % ./configure --prefix /your/install/path
+  % make
+  % make check
+  % make install
+  % (cd easel; make install)
+</pre>
+
+<p>The <code>make check</code> is optional. It runs a test suite that checks for errors in the software.</p>
+
+<p>The <code>make install</code> is optional too. It installs programs in <code>/your/install/path/bin/</code>
+and manual pages in <code>/your/install/path/share/man/man1</code>. If you don't provide a
+<code>--prefix</code> to <code>./configure</code> to specify the installation path, the default
+is <code>/usr/local</code>.</p>
+
+<p>The <code>(cd easel; make install)</code> in Easel installs a set of other small tools and their man pages.
+We don't make this part of the HMMER <code>make install</code> because Easel is part of other packages
+(Infernal, for example) and you might have already installed Easel tools.</p>
+
+<p>HMMER compiles and runs on any POSIX-compliant system
+with an ANSI C compiler, including Mac OS/X, Linux, and any UNIX operating systems,
+provided it supports SSE2, ARM NEON, or big-endian Altivec/VMX vector instructions.
+This includes essentially all Intel/AMD compatible machines, Apple OS/X Intel or ARM machines, and some PowerPC machines.
+For more installation and configuration options, see the <strong>Installation</strong>
+chapter of the <a href="http://eddylab.org/software/hmmer/Userguide.pdf">User Guide</a>.</p>
+
+
+</main>
+</body>
+</html>
